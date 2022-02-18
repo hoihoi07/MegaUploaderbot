@@ -25,7 +25,7 @@ finally:
 
 
 ### Global Variable
-common_text = '\n\n<b><u>If you are facing any problem😫, so report📝 at @AJPyroVerseGroup</u></b>'
+common_text = '\n\n<b><u>If you are facing any problem😫, so report📝 at @jetbots_support</u></b>'
 to_login = '<b>If you are not logged in then, send login detail in this format email,password.</b>\n'
 
 
@@ -43,16 +43,16 @@ async def search_user_in_community(
     ):
     try:
         userChannel = await bot.get_chat_member(
-            '@AJPyroVerse',
+            '@jetbots',
             msg.chat.id
         )
         userGroup = await bot.get_chat_member(
-            '@AJPyroVerseGroup',
+            '@jetbots_support',
             msg.chat.id
         )
         if "kicked" in (userGroup.status, userChannel.status):
             await msg.reply_text(
-                "<b>You are Banned🚫 from AJPyroVerse Community.\nContact @AJTimePyro (Owner of AJPyroVerse)</b>",
+                "<b>You are Banned🚫 from Jetbots Community.\nContact @jettastic (Owner of @jetbots)</b>",
                 parse_mode = 'html'
             )
             return
@@ -65,13 +65,13 @@ async def search_user_in_community(
                     [
                         InlineKeyboardButton(
                             'Join our Channel.',
-                            url = 'https://t.me/AJPyroVerse'
+                            url = 'https://t.me/jetbots'
                         )
                     ],
                     [
                         InlineKeyboardButton(
                             'Join our Group.',
-                            url = 'https://t.me/AJPyroVerseGroup'
+                            url = 'https://t.me/jetbots_support'
                         )
                     ]
                 ]
